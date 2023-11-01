@@ -1,0 +1,39 @@
+{% include 'layout.html'   %}
+
+
+{% block body %}
+
+<br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm text-center">
+            <span style="font-size: 25px;"> Hesap Bilgileriniz </span> <br><br>
+            <div style="border: 1px solid black; width: 250px; margin: auto;">
+                <br>
+                <span style="font-size: 22px;"> Online Ajanda </span> <br><br>
+                    <div>
+                      <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="/" role="tab" aria-controls="home"> Ajandalarım </a>
+                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"> Yeni Ajanda Ekle</a>
+                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages"> Ajanda Sil </a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"> Ajanda Ayarları </a>
+                      </div>
+                    </div>
+                    <br>
+                    <span style="font-size: 22px;"> Kişisel Bilgiler </span> <br><br>
+                    <div>
+                        <div class="list-group" id="list-tab" role="tablist">
+                          <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" role="tab" aria-controls="home"> Kullanıcı Adı: {{user_data.username}} </a>
+                          <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" role="tab" aria-controls="profile"> Telefon No: {{user_data.phone}} </a>
+                          <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" role="tab" aria-controls="messages"> Email Adres: {{user_data.email}} </a>
+                          <a class="list-group-item list-group-item-action" id="list-settings-list"  href="/edit/{{user_data.username}}" role="tab" aria-controls="settings"> Bilgilerimi Düzenle </a>
+                        </div>
+                      </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

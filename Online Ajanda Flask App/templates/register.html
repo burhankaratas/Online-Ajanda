@@ -1,0 +1,55 @@
+{% include 'layout.html'   %}
+
+
+{% block body %}
+<br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm">
+            <div style="border-radius: 25px; text-align: center;">
+                <span style="font-size: 30px;"> Kayıt Ol Ve Online Ajandan Oluşsun! </span>
+            </div>
+        </div>
+        <div class="col-sm"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm">
+            <br>
+            <div style="border-radius: 25px; text-align: center;">
+                <br>
+                <form method="post" class="horizontal-form">
+                    <div class="form-group">
+                        <label for="{{ form.username.id }}">Name:</label>
+                        <span> {{ form.username(class="form-control") }} </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.email.id }}">Email:</label>
+                        {{ form.email(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.phone.id }}">Phone:</label>
+                        {{ form.phone(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.password.id }}">Password:</label>
+                        {{ form.password(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.passwordAgain.id }}">Confirm Password:</label>
+                        {{ form.passwordAgain(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Kayıt Ol" style="background-color: black; color: white; border: none; padding: 10px;">
+                    </div>
+                </form>
+                
+                <br>
+            </div>
+        </div>
+        <div class="col-sm"></div>
+    </div>
+</div>
+    
+{% endblock %}

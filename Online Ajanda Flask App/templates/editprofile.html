@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+<br><br><br><br><br>
+<div class="container">
+    <h3> Bilgilerinizi Düzenleyin </h3>
+    <hr>
+
+    {% from "includes/formhelpers.html" import render_field %}
+
+    <form method="post" class="horizontal-form">
+        <div class="form-group">
+            <label for="{{ form.username.id }}">Kullanıcı Adınız:</label>
+            <span> {{ form.username(class="form-control") }} </span>
+        </div>
+        <div class="form-group">
+            <label for="{{ form.email.id }}">Mailiniz:</label>
+            {{ form.email(class="form-control") }}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.phone.id }}">Telefon Numaranız:</label>
+            {{ form.phone(class="form-control") }}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.password.id }}"> Doğrulamak İçin Şifrenizi Girin: </label>
+            {{ form.password(class="form-control") }}
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Bilgileri Güncelle" style="background-color: black; color: white; border: none; padding: 10px;">
+            <a style="background-color: black; color: white; border: none; padding: 10px; text-decoration: none;" href="/profile/{{ form.username.data }}"> İptal Et </a>
+        </div>
+
+
+</div>
+    
+{% endblock %}
