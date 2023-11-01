@@ -1,6 +1,6 @@
 # Online Ajanda Uygulaması
 
-Bu proje, kullanıcıların internet üzerinde online ajandalarını yönetmelerini sağlayan bir web uygulamasını içermektedir. HTML, CSS, Flask ve Bootstrap gibi teknolojiler kullanıldı.
+Bu proje, kullanıcıların internet üzerinde online ajandalarını yönetmelerini sağlayan bir web uygulamasını içermektedir. HTML, CSS, Flask ve Bootstrap gibi teknolojiler kullanıldı. (Proje tamamlanmadı)
 
 ## Proje Açıklaması
 
